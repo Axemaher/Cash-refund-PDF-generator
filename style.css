@@ -1,0 +1,39 @@
+.main {
+    max-width: 900px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type=text],
+input[type=number],
+select {
+    width: 250px;
+    padding: 1px;
+    margin: 4px;
+    /*    display: inline-block;*/
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bankNumber input {
+    width: 60%;
+    margin-left: 20px;
+}
+
+.bankNumber .line {
+    justify-content: flex-start;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+.NIP,
+.companyName {
+    display: none;
+}
