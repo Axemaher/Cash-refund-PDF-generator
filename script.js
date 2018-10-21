@@ -142,6 +142,10 @@ document.getElementById("generate").addEventListener("click", () => {
         style: "header"
       },
       {
+        text: `${nameRes.textContent}`,
+        style: "subheader"
+      },
+      {
         text: `${adressRes.textContent}`,
         style: "subheader"
       },
@@ -201,5 +205,7 @@ document.getElementById("generate").addEventListener("click", () => {
       }
     }
   };
-  pdfMake.createPdf(docDefinition).download("optionalName.pdf");
+  pdfMake
+    .createPdf(docDefinition)
+    .download(`${nameRes.textContent} ${docNumberRes.textContent}.pdf`);
 });
