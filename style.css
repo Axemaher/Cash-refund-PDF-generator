@@ -37,3 +37,7 @@ select {
 .companyName {
     display: none;
 }
+
+.generate {
+    display: none;
+}
