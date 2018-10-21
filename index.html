@@ -13,27 +13,73 @@
 	<div class="main container">
 		<div class="row">
 			<div class="bankNumber col-md-12">
-				<span class="line">Numer konta: <input type="text" placeholder="00 0000 0000 0000 0000 0000 0000" id="number"></span>
-			</div>
-			<div class="leftCol col-md-6">
-				<span class="line">Imię i nazwisko: <input type="text" placeholder="imię i nazwisko" id="name"></span>
-				<span class="line">Adres: <input type="text" placeholder="ulica i numer domu" id="adress"></span>
-				<span class="line">Kod pocztowy: <input type="text" placeholder="00-000" id="postCode"></span>
-				<span class="line">Miejscowość: <input type="text" placeholder="miejscowość" id="city"></span>
-				<span class="line">Kwota zwrotu: <input placeholder="000,00" type="number" id="cash"></span>
-			</div>
-			<div class="rightCol col-md-6">
-
-				<span class="line">Nick: <input type="text" placeholder="nick" id="nick"></span>
-				<span class="line">Mail: <input type="text" placeholder="mail@mail.com" id="mail"></span>
-				<span class="">Firma? <input type="checkbox" id="companyCheckInput"></span>
-				<span class="line companyName">Nazwa firmy: <input type="text" placeholder="nazwa firmy" id="companyName"></span>
-				<span class="line NIP">Numer NIP: <input type="text" placeholder="000 000 00 00" id="NIP"></span>
-				<span class="line">Data: <p id="date"></p></span>
+				<div class="line">
+					<label>Numer konta:* </label>
+					<input type="text" id="number" value="00 0000 0000 0000 0000 0000 0000">
+				</div>
 
 			</div>
 		</div>
-		<button>Pokaż dane</button>
+		<div class="row">
+			<div class="leftCol col-md-6">
+				<div class="line">
+					<label>Imię i nazwisko:</label>
+					<input type="text" id="name" value="imię i nazwisko">
+				</div>
+				<div class="line">
+					<label class="line">Adres: </label>
+					<input type="text" id="adress" value="ulica i numer domu">
+				</div>
+				<div class="line">
+					<label>Kod pocztowy: </label>
+					<input type="text" id="postCode" value="00-000">
+				</div>
+				<div class="line">
+					<label>Miejscowość: </label>
+					<input type="text" id="city" value="miejscowość">
+				</div>
+				<div class="line">
+					<label>Kwota zwrotu:* </label>
+					<input type="number" id="cash" value="100.00">
+				</div>
+			</div>
+			<div class="rightCol col-md-6">
+				<div class="line">
+					<label>Nick:* </label>
+					<input type="text" id="nick" value="nick">
+				</div>
+				<div class="line">
+					<label>Mail: </label>
+					<input type="text" id="mail" value="mail@mail.com">
+				</div>
+				<div class="line">
+					<label>Nr. dokumentu księgowego: </label>
+					<input type="text" id="docNumber">
+				</div>
+				<div class="line">
+					<label>Firma? </label>
+					<input type="checkbox" id="companyCheckInput">
+				</div>
+				<div class="line companyName">
+					<label>Nazwa firmy: </label>
+					<input type="text" id="companyName" value="nazwa firmy">
+				</div>
+				<div class="line NIP">
+					<label>Numer NIP:* </label>
+					<input type="text" id="NIP" value="000 000 00 00">
+				</div>
+				<div class="line">
+					<label>Data: </label>
+					<p id="date"></p>
+				</div>
+			</div>
+		</div>
+
+		<button class="btn btn-secondary">Pokaż dane</button>
+		<div class="errors">
+			<ul>
+			</ul>
+		</div>
 		<div class="result row">
 			<div class="bankNumber col-md-12">
 				<p id="numberRes"></p>
@@ -48,12 +94,15 @@
 			<div class="rightCol col-md-6">
 				<p id="nickRes"></p>
 				<p id="mailRes"></p>
+				<p id="docNumberRes"></p>
 				<p id="companyNameRes"></p>
 				<p id="NIPRes"></p>
 			</div>
 		</div>
+		<button class="btn btn-secondary" id="generate">Generuj PDF</button>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+	<script src='pdfmake/build/pdfmake.min.js'></script>
+	<script src='pdfmake/build/vfs_fonts.js'></script>
 	<script src="script.js"></script>
 </body>
 
