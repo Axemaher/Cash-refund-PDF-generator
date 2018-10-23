@@ -16,7 +16,7 @@
 			<div class="bankNumber col-md-12">
 				<div class="line">
 					<label>Numer konta:* </label>
-					<input type="text" id="number" placeholder="00 0000 0000 0000 0000 0000 0000">
+					<input type="text" placeholder="00 0000 0000 0000 0000 0000 0000" id="bankNumber">
 				</div>
 
 			</div>
@@ -25,37 +25,7 @@
 			<div class="leftCol col-md-6">
 				<div class="line">
 					<label>Imię i nazwisko:</label>
-					<input type="text" id="name" placeholder="imię i nazwisko">
-				</div>
-				<div class="line">
-					<label class="line">Adres: </label>
-					<input type="text" id="adress" placeholder="ulica i numer domu">
-				</div>
-				<div class="line">
-					<label>Kod pocztowy: </label>
-					<input type="text" id="postCode" placeholder="00-000">
-				</div>
-				<div class="line">
-					<label>Miejscowość: </label>
-					<input type="text" id="city" placeholder="miejscowość">
-				</div>
-				<div class="line">
-					<label>Kwota zwrotu:* </label>
-					<input type="number" id="cash" placeholder="100.00">
-				</div>
-			</div>
-			<div class="rightCol col-md-6">
-				<div class="line">
-					<label>Nick:* </label>
-					<input type="text" id="nick" placeholder="nick">
-				</div>
-				<div class="line">
-					<label>Mail: </label>
-					<input type="text" id="mail" placeholder="mail@mail.com">
-				</div>
-				<div class="line">
-					<label>Nr. dokumentu księgowego: </label>
-					<input type="text" id="docNumber">
+					<input type="text" placeholder="imię i nazwisko" id="name">
 				</div>
 				<div class="line">
 					<label>Firma? </label>
@@ -63,11 +33,41 @@
 				</div>
 				<div class="line companyName">
 					<label>Nazwa firmy: </label>
-					<input type="text" id="companyName" placeholder="nazwa firmy">
+					<input type="text" placeholder="nazwa firmy" id="companyName">
 				</div>
 				<div class="line NIP">
 					<label>Numer NIP:* </label>
-					<input type="text" id="NIP" placeholder="000 000 00 00">
+					<input type="text" placeholder="000 000 00 00" id="nip">
+				</div>
+				<div class="line">
+					<label class="line">Adres: </label>
+					<input type="text" placeholder="ulica i numer domu" id="adress">
+				</div>
+				<div class="line">
+					<label>Kod pocztowy: </label>
+					<input type="text" placeholder="00-000" id="postCode">
+				</div>
+				<div class="line">
+					<label>Miejscowość: </label>
+					<input type="text" placeholder="miejscowość" id="city">
+				</div>
+				<div class="line">
+					<label>Kwota zwrotu:* </label>
+					<input type="text" placeholder="100.00" id="cash">
+				</div>
+			</div>
+			<div class="rightCol col-md-6">
+				<div class="line">
+					<label>Nick:* </label>
+					<input type="text" placeholder="nick" id="nick">
+				</div>
+				<div class="line">
+					<label>Mail: </label>
+					<input type="text" placeholder="mail@mail.com" id="mail">
+				</div>
+				<div class="line">
+					<label>Nr. dokumentu księgowego: </label>
+					<input type="text" placeholder="kfs123" id="docNumber">
 				</div>
 				<div class="line">
 					<label>Data: </label>
@@ -76,28 +76,28 @@
 			</div>
 		</div>
 
-		<button class="btn btn-secondary">Pokaż dane</button>
+		<button class="btn btn-secondary buttonShowValues">Pokaż dane</button>
 		<div class="errors">
 			<ul>
 			</ul>
 		</div>
-		<div class="result row">
+		<div class="result row" id="result">
 			<div class="bankNumber col-md-12">
-				<p id="numberRes"></p>
+				<p class="resultValue" id="bankNumberResult"></p>
 			</div>
 			<div class="leftCol col-md-6">
-				<p id="nameRes"></p>
-				<p id="adressRes"></p>
-				<p id="postCodeRes"></p>
-				<p id="cityRes"></p>
-				<p id="cashRes"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
 			</div>
 			<div class="rightCol col-md-6">
-				<p id="nickRes"></p>
-				<p id="mailRes"></p>
-				<p id="docNumberRes"></p>
-				<p id="companyNameRes"></p>
-				<p id="NIPRes"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
+				<p class="resultValue"></p>
 			</div>
 		</div>
 		<button class="btn btn-secondary generate" id="generate">Generuj PDF</button>
