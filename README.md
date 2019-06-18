@@ -2,7 +2,7 @@
 
 Generating a pdf file from the given data in the form.
 ## Screenshots
-![Screenshot](./images/screenshot.jpg)
+![Screenshot](./SCREEN.jpg)
 ## Technologies
 * HTML
 * CSS
